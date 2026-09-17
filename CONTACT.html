@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Ali's Biryani BBQ & Grill</title>
+    <meta name="description" content="Contact Ali's Biryani BBQ & Grill in Coram, NY. Call, text or visit us today.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+
+           /* Instagram Grid in Footer */
+.footer-instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+    margin-top: 5px;
+}
+
+.footer-instagram-grid img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: transform 0.3s, opacity 0.3s;
+    cursor: pointer;
+}
+
+.footer-instagram-grid img:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+}
+
+@media (max-width: 560px) {
+    .footer-instagram-grid {
+        gap: 3px;
+    }
+}
+        /* =====================================================
+           CONTACT PAGE — LUXURY EDITORIAL
+        ===================================================== */
+
+        :root {
+            --lux-black: #090909;
+            --lux-charcoal: #111111;
+            --lux-ivory: #F6F1E7;
+            --lux-burgundy: #8F1825;
+            --lux-wine: #5E0F18;
+            --lux-gold: #C8A45D;
+            --lux-gold-soft: #E0C47A;
+            --lux-muted: #777777;
+        }
+
+        /* ---------- HERO ---------- */
+        .contact-hero {
+            position: relative;
+            min-height: 480px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: var(--lux-black);
+        }
+
+        .contact-hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(135deg, rgba(9,9,9,0.94) 0%, rgba(94,15,24,0.55) 50%, rgba(9,9,9,0.92) 100%),
+                url('assets/flayers/chicken biryani.jpeg') center/cover no-repeat;
+            z-index: 0;
+            animation: contactHeroZoom 22s ease-in-out infinite alternate;
+        }
+
+        @keyframes contactHeroZoom {
+            0%   { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+
+        .contact-hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 25% 40%, rgba(143, 24, 37, 0.55), transparent 55%),
+                radial-gradient(circle at 80% 60%, rgba(200, 164, 93, 0.15), transparent 55%);
+            animation: contactGlow 12s ease-in-out infinite alternate;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        @keyframes contactGlow {
+            0%   { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+
+        /* Vignette */
+        .contact-hero .hero-vignette {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.5) 100%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .contact-hero > .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-hero .kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--lux-gold);
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            padding: 8px 20px;
+            background: rgba(200, 164, 93, 0.08);
+            border: 1px solid rgba(200, 164, 93, 0.3);
+            border-radius: 100px;
+            opacity: 0;
+            animation: fadeUp 0.8s 0.2s forwards;
+        }
+
+        .contact-hero .kicker::before,
+        .contact-hero .kicker::after {
+            content: "";
+            width: 22px;
+            height: 1px;
+            background: var(--lux-gold);
+            opacity: 0.6;
+        }
+
+        .contact-hero h1 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(42px, 5.5vw, 72px);
+            line-height: 1.05;
+            font-weight: 700;
+            margin-bottom: 20px;
+            max-width: 780px;
+            background: linear-gradient(135deg, #ffffff 0%, var(--lux-gold-soft) 60%, var(--lux-gold) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 0;
+            animation: fadeUp 0.8s 0.4s forwards;
+        }
+
+        .contact-hero .hero-line {
+            width: 80px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--lux-gold), transparent);
+            margin-bottom: 22px;
+            opacity: 0;
+            animation: fadeUp 0.8s 0.55s forwards;
+        }
+
+        .contact-hero p {
+            max-width: 560px;
+            color: #d0d0d0;
+            font-size: 16px;
+            line-height: 1.7;
+            opacity: 0;
+            animation: fadeUp 0.8s 0.7s forwards;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(28px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ---------- CONTACT SECTION ---------- */
+        .contact-section {
+            position: relative;
+            padding: 110px 0;
+            background: var(--lux-ivory);
+            overflow: hidden;
+        }
+
+        .contact-section::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle, rgba(143, 24, 37, 0.04) 1px, transparent 1px);
+            background-size: 32px 32px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .contact-section > .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ---------- SECTION HEADING ---------- */
+        .contact-heading {
+            text-align: center;
+            max-width: 680px;
+            margin: 0 auto 60px;
+        }
+
+        .contact-heading .label {
+            display: inline-block;
+            color: var(--lux-burgundy);
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            padding: 6px 16px;
+            background: rgba(143, 24, 37, 0.06);
+            border-radius: 100px;
+        }
+
+        .contact-heading h2 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(34px, 4vw, 52px);
+            line-height: 1.1;
+            color: var(--lux-black);
+            margin-bottom: 16px;
+        }
+
+        .contact-heading h2 em {
+            font-style: italic;
+            color: var(--lux-burgundy);
+            font-weight: 600;
+        }
+
+        .contact-heading p {
+            color: var(--lux-muted);
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* ---------- GRID ---------- */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.15fr;
+            gap: 40px;
+            align-items: stretch;
+        }
+
+        /* ---------- CONTACT CARD (LEFT) ---------- */
+        .contact-card {
+            position: relative;
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 48px 44px;
+            box-shadow:
+                0 30px 70px rgba(9, 9, 9, 0.08),
+                0 0 0 1px rgba(200, 164, 93, 0.15);
+            overflow: hidden;
+        }
+
+        .contact-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--lux-burgundy) 0%, var(--lux-gold) 50%, var(--lux-burgundy) 100%);
+            background-size: 200% 100%;
+            animation: borderSlide 5s linear infinite;
+        }
+
+        @keyframes borderSlide {
+            0%   { background-position: 0% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        .contact-card::after {
+            content: "";
+            position: absolute;
+            top: -80px;
+            right: -80px;
+            width: 220px;
+            height: 220px;
+            background: radial-gradient(circle, rgba(200, 164, 93, 0.06), transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .contact-card h2 {
+            font-family: "Playfair Display", serif;
+            font-size: 42px;
+            line-height: 1.1;
+            color: var(--lux-black);
+            margin-bottom: 8px;
+            position: relative;
+            font-weight: 700;
+        }
+
+        .contact-card h2 em {
+            font-style: italic;
+            color: var(--lux-burgundy);
+            font-weight: 600;
+        }
+
+        .contact-card .card-sub {
+            color: var(--lux-muted);
+            font-size: 14px;
+            margin-bottom: 38px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            position: relative;
+        }
+
+        /* ---------- INFO ROWS ---------- */
+        .info {
+            display: flex;
+            gap: 18px;
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            position: relative;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .info:last-of-type {
+            border-bottom: none;
+        }
+
+        .info:hover {
+            transform: translateX(4px);
+        }
+
+        .info:hover .icon {
+            transform: translateY(-3px);
+            border-color: var(--lux-gold);
+            box-shadow: 0 10px 25px rgba(143, 24, 37, 0.15);
+        }
+
+        .info .icon {
+            width: 52px;
+            height: 52px;
+            background: #FBF8F1;
+            border: 1px solid rgba(143, 24, 37, 0.12);
+            border-radius: 14px;
+            display: grid;
+            place-items: center;
+            font-size: 20px;
+            flex-shrink: 0;
+            color: var(--lux-burgundy);
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        .info .icon::before {
+            content: "";
+            position: absolute;
+            inset: -1px;
+            border-radius: inherit;
+            background: linear-gradient(135deg, var(--lux-gold), transparent 60%);
+            opacity: 0;
+            transition: opacity 0.35s ease;
+            z-index: -1;
+        }
+
+        .info:hover .icon::before {
+            opacity: 0.6;
+        }
+
+        .info > div:last-child {
+            flex: 1;
+            padding-top: 4px;
+        }
+
+        .info b {
+            display: block;
+            font-size: 11px;
+            font-weight: 800;
+            color: var(--lux-gold);
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            margin-bottom: 8px;
+        }
+
+        .info a:not(.btn),
+        .info span {
+            color: var(--lux-charcoal);
+            font-size: 15px;
+            line-height: 1.6;
+            transition: color 0.3s ease;
+        }
+
+        .info a:not(.btn) {
+            font-weight: 700;
+            color: var(--lux-black);
+            text-decoration: none;
+            border-bottom: 1px dotted rgba(143, 24, 37, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .info a:not(.btn):hover {
+            color: var(--lux-burgundy);
+            border-bottom-color: var(--lux-burgundy);
+        }
+
+        /* Buttons inside info */
+        .info .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 12px;
+            padding: 11px 22px;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--lux-burgundy) 0%, var(--lux-wine) 100%);
+            color: #fff;
+            text-decoration: none;
+            border: 1px solid rgba(200, 164, 93, 0.3);
+            box-shadow: 0 8px 20px rgba(143, 24, 37, 0.25);
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .info .btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(200, 164, 93, 0.3), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .info .btn:hover::before {
+            left: 100%;
+        }
+
+        .info .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 14px 30px rgba(143, 24, 37, 0.4);
+            border-color: var(--lux-gold);
+        }
+
+        /* ---------- NOTICE ---------- */
+        .notice {
+            background: linear-gradient(135deg, rgba(143, 24, 37, 0.04), rgba(200, 164, 93, 0.05));
+            border-left: 3px solid var(--lux-gold);
+            padding: 22px 24px;
+            border-radius: 12px;
+            margin-top: 32px;
+            color: var(--lux-charcoal);
+            font-size: 13px;
+            line-height: 1.7;
+            position: relative;
+        }
+
+        .notice strong {
+            color: var(--lux-burgundy);
+            font-weight: 800;
+            font-size: 12px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        /* ---------- MAP WRAPPER ---------- */
+        .map-wrapper {
+            position: relative;
+            width: 100%;
+            min-height: 100%;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 30px 70px rgba(9, 9, 9, 0.15);
+            border: 1px solid rgba(200, 164, 93, 0.2);
+            background: #f0f0f0;
+        }
+
+        .map-wrapper::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 24px;
+            padding: 2px;
+            background: linear-gradient(135deg, var(--lux-burgundy), var(--lux-gold), var(--lux-burgundy));
+            -webkit-mask:
+                linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+            z-index: 3;
+            opacity: 0.5;
+        }
+
+        .map-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 100%;
+            border: 0;
+            display: block;
+            filter: grayscale(30%) contrast(1.05);
+            transition: filter 0.6s ease;
+        }
+
+        .map-wrapper:hover iframe {
+            filter: grayscale(0%) contrast(1.08);
+        }
+
+        /* Map pin */
+        .map-pin {
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 10px 18px 10px 10px;
+            border-radius: 100px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(200, 164, 93, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            font-weight: 800;
+            color: var(--lux-black);
+            z-index: 4;
+            letter-spacing: 0.3px;
+            animation: pinFloat 4s ease-in-out infinite;
+        }
+
+        @keyframes pinFloat {
+            0%, 100% { transform: translateY(0); }
+            50%      { transform: translateY(-6px); }
+        }
+
+        .map-pin-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--lux-burgundy), var(--lux-wine));
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            font-size: 14px;
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(143, 24, 37, 0.4);
+        }
+
+        /* ---------- ORDER CTA SECTION ---------- */
+        .order-cta-section {
+            position: relative;
+            padding: 0 0 110px;
+            background: var(--lux-ivory);
+            overflow: hidden;
+        }
+
+        .order-cta-section > .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .order-cta-card {
+            background: linear-gradient(135deg, var(--lux-black) 0%, var(--lux-wine) 50%, var(--lux-black) 100%);
+            border-radius: 28px;
+            padding: 70px 60px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 40px 90px rgba(9, 9, 9, 0.35);
+            border: 1px solid rgba(200, 164, 93, 0.15);
+        }
+
+        .order-cta-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--lux-gold), transparent);
+        }
+
+        .order-cta-card::after {
+            content: "";
+            position: absolute;
+            top: -150px;
+            right: -150px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(143, 24, 37, 0.6), transparent 70%);
+            border-radius: 50%;
+            filter: blur(60px);
+            animation: ctaGlow 15s ease-in-out infinite alternate;
+            pointer-events: none;
+        }
+
+        @keyframes ctaGlow {
+            0%   { transform: translate(0, 0) scale(1); opacity: 0.7; }
+            100% { transform: translate(-40px, 40px) scale(1.15); opacity: 1; }
+        }
+
+        .order-cta-inner {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .order-cta-inner .kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--lux-gold);
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 3.5px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            padding: 6px 16px;
+            background: rgba(200, 164, 93, 0.1);
+            border: 1px solid rgba(200, 164, 93, 0.3);
+            border-radius: 100px;
+        }
+
+        .order-cta-inner h2 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(32px, 4.5vw, 52px);
+            color: #fff;
+            line-height: 1.1;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .order-cta-inner h2 em {
+            font-style: italic;
+            color: var(--lux-gold);
+            font-weight: 600;
+        }
+
+        .order-cta-inner p {
+            color: #a8a8a8;
+            font-size: 15px;
+            line-height: 1.6;
+            max-width: 480px;
+        }
+
+        .order-cta-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        /* CTA buttons */
+        .btn-cta-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 32px;
+            background: linear-gradient(135deg, var(--lux-burgundy) 0%, var(--lux-wine) 100%);
+            color: #fff;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border: 1px solid rgba(200, 164, 93, 0.35);
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 12px 30px rgba(143, 24, 37, 0.35);
+        }
+
+        .btn-cta-primary::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(200, 164, 93, 0.35), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .btn-cta-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-cta-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 45px rgba(143, 24, 37, 0.5);
+            border-color: var(--lux-gold);
+        }
+
+        .btn-cta-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 30px;
+            background: transparent;
+            color: var(--lux-gold-soft);
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border: 1px solid rgba(200, 164, 93, 0.4);
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-cta-secondary:hover {
+            background: rgba(200, 164, 93, 0.08);
+            border-color: var(--lux-gold);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        /* ---------- RESPONSIVE ---------- */
+        @media (max-width: 1000px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .map-wrapper {
+                min-height: 480px;
+            }
+
+            .map-wrapper iframe {
+                min-height: 480px;
+            }
+        }
+
+        @media (max-width: 800px) {
+            .contact-hero {
+                min-height: 400px;
+            }
+
+            .contact-section {
+                padding: 70px 0;
+            }
+
+            .contact-card {
+                padding: 36px 28px;
+            }
+
+            .contact-card h2 {
+                font-size: 34px;
+            }
+
+            .order-cta-card {
+                padding: 45px 30px;
+                text-align: center;
+            }
+
+            .order-cta-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .order-cta-inner p {
+                margin: 0 auto;
+            }
+
+            .order-cta-actions {
+                justify-content: center;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .contact-hero {
+                min-height: 360px;
+            }
+
+            .contact-hero h1 {
+                font-size: 34px;
+            }
+
+            .contact-hero p {
+                font-size: 14px;
+            }
+
+            .contact-card {
+                padding: 28px 22px;
+                border-radius: 20px;
+            }
+
+            .contact-card h2 {
+                font-size: 28px;
+            }
+
+            .info .icon {
+                width: 44px;
+                height: 44px;
+                font-size: 17px;
+            }
+
+            .info b {
+                font-size: 10px;
+                letter-spacing: 2px;
+            }
+
+            .info a:not(.btn),
+            .info span {
+                font-size: 14px;
+            }
+
+            .info .btn {
+                padding: 10px 18px;
+                font-size: 11px;
+            }
+
+            .map-wrapper {
+                min-height: 380px;
+                border-radius: 20px;
+            }
+
+            .map-wrapper iframe {
+                min-height: 380px;
+            }
+
+            .map-pin {
+                top: 16px;
+                left: 16px;
+                font-size: 12px;
+                padding: 8px 14px 8px 8px;
+            }
+
+            .map-pin-icon {
+                width: 28px;
+                height: 28px;
+                font-size: 12px;
+            }
+
+            .order-cta-card {
+                padding: 38px 24px;
+                border-radius: 22px;
+            }
+
+            .btn-cta-primary,
+            .btn-cta-secondary {
+                width: 100%;
+                justify-content: center;
+                padding: 15px 24px;
+            }
+        }
+
+        /* Reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="container top-bar-inner">
+        <span class="top-bar-left">
+            <span class="pulse-dot"></span>
+            Ali's • Biryani • BBQ • Grill
+        </span>
+        <span class="top-bar-right">
+            <a href="tel:+16318464080">📞 631-846-4080</a>
+            &nbsp; • &nbsp;
+            📍 Coram, NY
+        </span>
+    </div>
+</div>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="container nav-inner">
+        <a href="index.html">
+            <img src="assets/logo/Layer 6.png" alt="Ali's" class="logo">
+        </a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">☰</button>
+        <nav class="navigation" id="navigation">
+            <a href="index.html">Home</a>
+            <a href="MENU.html">Menu</a>
+            <a href="SPECIALS.html">Specials</a>
+            <a href="ABOUT.html">About</a>
+            <a href="GALLERY.html">Gallery</a>
+            <a href="CONTACT.html">Contact</a>
+            <a href="ORDER.html" class="nav-order">Order Now</a>
+        </nav>
+    </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="contact-hero">
+    <div class="hero-vignette"></div>
+    <div class="container">
+        <div class="kicker">GET IN TOUCH</div>
+        <h1>Come hungry.<br>Leave happy.</h1>
+        <div class="hero-line"></div>
+        <p>Call, text or visit Ali's Biryani BBQ &amp; Grill in Coram, NY.</p>
+    </div>
+</section>
+
+<!-- ================= CONTACT SECTION ================= -->
+<section class="contact-section">
+    <div class="container">
+
+        <div class="contact-heading reveal">
+            <span class="label">CONTACT US</span>
+            <h2>We're just a <em>call or text away.</em></h2>
+            <p>Reach out to place an order, ask a question, or find your way to our kitchen.</p>
+        </div>
+
+        <div class="contact-grid">
+
+            <!-- CONTACT CARD -->
+            <div class="contact-card reveal">
+                <h2>Let's <em>talk.</em></h2>
+                <p class="card-sub">Fast response · Friendly service · Fresh food</p>
+
+                <!-- PHONE -->
+                <div class="info">
+                    <div class="icon">☎</div>
+                    <div>
+                        <b>Phone</b>
+                        <a href="tel:+16318464080">(631) 846-4080</a>
+                        <br>
+                        <a class="btn" href="tel:+16318464080">📞 Call Now</a>
+                    </div>
+                </div>
+
+                <!-- SMS -->
+                <div class="info">
+                    <div class="icon">💬</div>
+                    <div>
+                        <b>Message</b>
+                        <span>Send us a text — fast response.</span>
+                        <br>
+                        <a class="btn" href="sms:+16318464080?body=Hi%20Ali%27s%21%20I%20have%20a%20question.">💬 Send Message</a>
+                    </div>
+                </div>
+
+                <!-- ADDRESS -->
+                <div class="info">
+                    <div class="icon">⌖</div>
+                    <div>
+                        <b>Address</b>
+                        <span>3663 NY-112 UNIT 8<br>CORAM, NY 11727</span>
+                    </div>
+                </div>
+
+                <!-- HOURS -->
+                <div class="info">
+                    <div class="icon">⏰</div>
+                    <div>
+                        <b>Store Hours</b>
+                        <span>Every day · 10:00 AM – 10:00 PM</span>
+                    </div>
+                </div>
+
+                <!-- DIRECTIONS -->
+                <div class="info">
+                    <div class="icon">↗</div>
+                    <div>
+                        <b>Directions</b>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=3663%20NY-112%20UNIT%208%2C%20CORAM%2C%20NY%2011727" target="_blank" rel="noopener">Open Google Maps →</a>
+                    </div>
+                </div>
+
+                <div class="notice">
+                    <strong>Catering Available</strong>
+                    12% gratuity fee will be added to your bill.
+                </div>
+            </div>
+
+            <!-- MAP -->
+            <div class="map-wrapper reveal reveal-delay-1">
+                <div class="map-pin">
+                    <div class="map-pin-icon">📍</div>
+                    Coram, NY
+                </div>
+                <iframe title="Ali's Biryani BBQ & Grill Location" loading="lazy"
+                        src="https://www.google.com/maps?q=3663+NY-112+UNIT+8,+CORAM,+NY+11727&output=embed"></iframe>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================= ORDER CTA ================= -->
+<section class="order-cta-section">
+    <div class="container">
+        <div class="order-cta-card reveal">
+            <div class="order-cta-inner">
+                <div>
+                    <div class="kicker">ORDER DIRECT</div>
+                    <h2>Ready to <em>order?</em></h2>
+                    <p>Text us directly — we'll get it ready for you.</p>
+                </div>
+                <div class="order-cta-actions">
+                    <a class="btn-cta-primary" href="sms:+16318464080?body=Hi%20Ali%27s%20Biryani%20BBQ%20%26%20Grill%21%20I%20would%20like%20to%20place%20an%20order.">💬 Send Order</a>
+                    <a class="btn-cta-secondary" href="MENU.html">View Menu →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<!-- ================= FOOTER ================= -->
+<footer>
+    <div class="container footer-grid">
+        <div class="footer-brand">
+            <img src="assets/logo/Layer 6.png" alt="Ali's Biryani BBQ & Grill">
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+            <div class="footer-socials">
+                <a href="#" aria-label="Twitter">🐦</a>
+                <a href="#" aria-label="Facebook">📘</a>
+                <a href="#" aria-label="Instagram">📷</a>
+            </div>
+        </div>
+
+         <div>
+            <h3>Open Hours</h3>
+            <p><strong>Monday</strong> — 10:00  </p>
+            <p><strong>Tuesday</strong> — 10:00  </p>
+            <p><strong>Wednesday</strong> — 10:00  </p>
+            <p><strong>Thursday</strong> — 10:00  </p>
+            <p><strong>Friday</strong> — 10:00</p>
+            <p><strong>Saturday</strong> — 10:00</p>
+            <p><strong>Sunday</strong> — Closed</p>
+        </div>
+
+        <div>
+            <h3>Instagram</h3>
+            <div class="footer-instagram-grid">
+                <img src="assets/flayers/chicken biryani.jpeg" alt="Biryani">
+                <img src="assets/flayers/bbq 5pcs.jpeg" alt="BBQ">
+                <img src="assets/flayers/chicken samosa.jpeg" alt="Samosa">
+                <img src="assets/flayers/goat karahi.jpeg" alt="Karahi">
+                <img src="assets/flayers/chicken tikka.jpeg" alt="Tikka">
+                <img src="assets/flayers/butter chicken.jpeg" alt="Butter Chicken">
+            </div>
+        </div>
+
+        <div class="footer-newsletter">
+            <h3>Newsletter</h3>
+            <p>Far far away, behind the word mountains, far from the countries.</p>
+            <div class="newsletter-input">
+                <input type="email" placeholder="Enter email address" aria-label="Email address">
+                <button type="button">Subscribe</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container footer-bottom">
+        <span>Copyright © <span class="current-year"></span> All rights reserved | This template is made with ❤️ by <a href="#">Colorlib</a></span>
+    </div>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>
